@@ -1,0 +1,35 @@
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+button {
+    background-color: #007bff;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.page-link a {
+    color: #007bff;
+}
+
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 8px;
+    margin-bottom: 0;
+    width: auto;
+}
+
+.checkbox-label {
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}

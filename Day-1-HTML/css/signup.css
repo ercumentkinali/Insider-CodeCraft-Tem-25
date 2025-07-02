@@ -1,0 +1,16 @@
+input:focus {
+    outline: none;
+    border-color: #28a745;
+}
+
+button {
+    background-color: #28a745;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.page-link a {
+    color: #28a745;
+}
