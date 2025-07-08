@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collatz Sequence - En Uzun Dizi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔢 Collatz Sequence Finder</h1>
+        
+        <div class="example">
+            <h3>Collatz Kuralları:</h3>
+            <p><strong>n çift ise:</strong> n → n/2</p>
+            <p><strong>n tek ise:</strong> n → 3n + 1</p>
+            <p><strong>Örnek (13):</strong> 13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1</p>
+            <p>Bu dizi 10 terim içerir.</p>
+        </div>
+        
+        <div class="controls">
+            <input type="number" id="maxNumber" placeholder="Maksimum sayı (varsayılan: 1000000)" min="1" max="10000000">
+            <button onclick="findLongestSequence()">En Uzun Diziyi Bul</button>
+            <button onclick="showSpecificSequence()">Belirli Sayıyı Göster</button>
+        </div>
+        
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-bar" id="progressBar">0%</div>
+        </div>
+        
+        <div class="results" id="results">
+            <h2>📊 Sonuçlar</h2>
+            <div class="stats" id="stats"></div>
+            <div id="sequenceDisplay"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
