@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geri Sayım Uygulaması</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>⏰ Geri Sayım</h1>
+    
+    <div class="input-group">
+        <label for="timeInput">Süre (saniye):</label>
+        <input type="number" id="timeInput" min="1" max="3600" value="10" placeholder="10">
+    </div>
+    
+    <div class="display">
+        <div id="countdown">10</div>
+    </div>
+    
+    <div class="buttons">
+        <button id="startBtn">🚀 Başlat</button>
+        <button id="resetBtn">🔄 Sıfırla</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
