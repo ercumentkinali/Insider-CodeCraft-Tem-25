@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Görev Yönetim Uygulaması</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Görev Yönetim Uygulaması</h1>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalTasks">0</div>
+                <div class="stat-label">Toplam Görev</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="completedTasks">0</div>
+                <div class="stat-label">Tamamlanan</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="pendingTasks">0</div>
+                <div class="stat-label">Bekleyen</div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <form id="taskForm">
+                <div class="form-group">
+                    <label for="taskTitle">Görev Başlığı *</label>
+                    <input type="text" id="taskTitle" placeholder="Görev başlığını girin..." required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="taskDescription">Açıklama</label>
+                    <textarea id="taskDescription" placeholder="Görev açıklamasını girin..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Öncelik Seviyesi *</label>
+                    <div class="priority-group">
+                        <input type="radio" id="lowPriority" name="priority" value="low">
+                        <label for="lowPriority" class="priority-option low">
+                            🟢 Düşük
+                        </label>
+                        
+                        <input type="radio" id="mediumPriority" name="priority" value="medium">
+                        <label for="mediumPriority" class="priority-option medium">
+                            🟡 Orta
+                        </label>
+                        
+                        <input type="radio" id="highPriority" name="priority" value="high">
+                        <label for="highPriority" class="priority-option high">
+                            🔴 Yüksek
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">✅ Görev Ekle</button>
+                <div id="errorMessage" class="error-message"></div>
+            </form>
+        </div>
+
+        <div class="controls">
+            <button id="showAllBtn" class="filter-btn active">📋 Tümünü Göster</button>
+            <button id="showCompletedBtn" class="filter-btn">✅ Tamamlananlar</button>
+            <button id="showPendingBtn" class="filter-btn">⏳ Bekleyenler</button>
+            <button id="sortPriorityBtn" class="sort-btn">🔄 Önceliğe Göre Sırala</button>
+        </div>
+
+        <div class="task-list">
+            <div id="taskContainer">
+                <div class="empty-state">
+                    <h3>🎯 Henüz görev eklemediniz</h3>
+                    <p>Yukarıdaki formu kullanarak yeni görevler ekleyebilirsiniz.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
