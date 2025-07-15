@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenci Yönetim Sistemi</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Öğrenci Yönetim Sistemi</h1>
+            <p>Öğrenci bilgilerini yönetin ve takip edin</p>
+        </div>
+        
+        <div class="content">
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalStudents">0</div>
+                    <div class="stat-label">Toplam Öğrenci</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalClasses">0</div>
+                    <div class="stat-label">Toplam Sınıf</div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>🎓 Yeni Öğrenci Ekle</h2>
+                <form id="studentForm">
+                    <div class="form-group">
+                        <label for="studentName">Öğrenci Adı:</label>
+                        <input type="text" id="studentName" name="studentName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="studentClass">Sınıf:</label>
+                        <select id="studentClass" name="studentClass" required>
+                            <option value="">Sınıf Seçin</option>
+                            <option value="9-A">9-A</option>
+                            <option value="9-B">9-B</option>
+                            <option value="10-A">10-A</option>
+                            <option value="10-B">10-B</option>
+                            <option value="11-A">11-A</option>
+                            <option value="11-B">11-B</option>
+                            <option value="12-A">12-A</option>
+                            <option value="12-B">12-B</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="studentAge">Yaş:</label>
+                        <input type="number" id="studentAge" name="studentAge" min="14" max="20" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="studentEmail">E-mail:</label>
+                        <input type="email" id="studentEmail" name="studentEmail" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">➕ Öğrenci Ekle</button>
+                </form>
+            </div>
+            
+            <div class="table-section">
+                <h2>👥 Öğrenci Listesi</h2>
+                <div class="table-container">
+                    <table id="studentTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Öğrenci Adı</th>
+                                <th>Sınıf</th>
+                                <th>Yaş</th>
+                                <th>E-mail</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
