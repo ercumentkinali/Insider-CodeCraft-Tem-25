@@ -10,7 +10,7 @@
                 setTimeout(() => $(this).removeClass('bounce'), 600);
                 loadProfiles();
             });
-u
+            
             $('#clearProfilesBtn').click(function() {
                 $(this).addClass('shake');
                 setTimeout(() => $(this).removeClass('shake'), 500);
