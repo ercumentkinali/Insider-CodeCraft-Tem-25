@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini E-Ticaret Kataloğu</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1><i class="fas fa-shopping-bag"></i> Mini E-Ticaret Kataloğu</h1>
+            
+            <!-- Search Section -->
+            <div class="search-container">
+                <input type="text" class="search-box" id="searchBox" placeholder="Ürün ID'si ile arama yapın (1-20)">
+                <button class="search-btn" id="searchBtn">
+                    <i class="fas fa-search"></i> Ara
+                </button>
+            </div>
+            
+            <!-- Cart Toggle -->
+            <div class="cart-toggle">
+                <button class="cart-btn" id="toggleCart">
+                    <i class="fas fa-shopping-cart"></i> Sepeti Göster 
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="clear-cart-btn" id="clearCart">
+                    <i class="fas fa-trash"></i> Sepeti Temizle
+                </button>
+            </div>
+        </div>
+
+        <!-- Carousel Section -->
+        <div class="carousel-container">
+            <h2><i class="fas fa-star"></i> Kategoriler</h2>
+            <div class="category-filter-info">
+                <p style="text-align: center; color: #666; margin-bottom: 15px;">
+                    <i class="fas fa-info-circle"></i> Kategoriye tıklayarak filtreleyebilirsiniz
+                </p>
+            </div>
+            <div class="product-carousel">
+                <div class="carousel-slide category-filter" data-category="all">
+                    <h3><i class="fas fa-th-large"></i></h3>
+                    <h3>Tümünü Göster</h3>
+                    <p>Tüm ürünler</p>
+                </div>
+                <div class="carousel-slide category-filter" data-category="clothing">
+                    <h3><i class="fas fa-tshirt"></i></h3>
+                    <h3>Giyim</h3>
+                    <p>En trend kıyafetler</p>
+                </div>
+                <div class="carousel-slide category-filter" data-category="electronics">
+                    <h3><i class="fas fa-laptop"></i></h3>
+                    <h3>Elektronik</h3>
+                    <p>Son teknoloji ürünleri</p>
+                </div>
+                <div class="carousel-slide category-filter" data-category="jewelery">
+                    <h3><i class="fas fa-gem"></i></h3>
+                    <h3>Mücevher</h3>
+                    <p>Özel koleksiyon</p>
+                </div>
+                <div class="carousel-slide category-filter" data-category="women's clothing">
+                    <h3><i class="fas fa-female"></i></h3>
+                    <h3>Kadın Giyim</h3>
+                    <p>Kadın giyim koleksiyonu</p>
+                </div>
+                <div class="carousel-slide category-filter" data-category="men's clothing">
+                    <h3><i class="fas fa-male"></i></h3>
+                    <h3>Erkek Giyim</h3>
+                    <p>Erkek giyim koleksiyonu</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Section -->
+        <div class="cart-section" id="cartSection">
+            <h2><i class="fas fa-shopping-cart"></i> Sepetim</h2>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be added here -->
+            </div>
+        </div>
+
+        <!-- Products Loading -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Ürünler yükleniyor...</p>
+        </div>
+
+        <!-- Products Section -->
+        <div class="product-grid" id="productList">
+            <!-- Products will be loaded here -->
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
